@@ -116,19 +116,16 @@ scikit-learn
 ##### Crear Pipelines.py
 Archivo de python que utilizando todas las herramientas anteriores, crea los pipelines para cada uno de los modelos.
 #### api_aplicacion.py
-Api de la aplicación que usando las funciones del modulo FuncionesApi crea 
+Api de la aplicación que usando las funciones del modulo FuncionesApi crea los respectivos endpoints. 
 #### FuncionesApi.py
-
+Modulo que usando las funciones del modulo "usar_pipelines.py", crea las funciones finales que va utilizar la Api de nuestra aplicación.
 ### Interfaz Gráfica
 - .streamlit -> Configuración de interfaz de la pagina web
 - static -> Distintas fuentes de letras
 - Interfaz_aplicacion.py -> Código de streamlit para interfaz gráfica
 - ArchivoEjemplo.csv -> Archivo de ejemplo para probar aplicación
 
-
-
 ## Instalación y ejecución
-
 
 ## Autor
 Manuel Elias Orellana Lavayen 
