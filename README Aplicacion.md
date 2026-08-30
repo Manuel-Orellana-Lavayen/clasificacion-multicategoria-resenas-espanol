@@ -19,6 +19,7 @@ scikit-learn
 - requests
 - streamlit
 
+```
 ├── Aplicación/
 │   │
 │   ├── API/
@@ -84,6 +85,7 @@ scikit-learn
 │
 └── requirements_aplicación.txt
     └─ Dependencias necesarias para ejecutar la aplicación.
+```
 
 ## Instalación y ejecución
 
