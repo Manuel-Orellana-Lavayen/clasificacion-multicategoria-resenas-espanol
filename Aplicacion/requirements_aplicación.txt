@@ -1,0 +1,31 @@
+# De preferencia instalar en Python 3.12.10
+
+scikit-learn==1.9.0
+pandas==3.0.5
+numpy==2.4.6
+
+#Version CPU para evitar fallos en sistemas que no usen GPU como acelerador
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.13.0
+torchvision == 0.28.0 # Para evitar que skops bloquee el proceso
+
+spacy==3.8.15
+sentence-transformers==6.0.0
+
+fastapi==0.141.1
+uvicorn==0.52.3
+pydantic==2.13.4
+
+cloudpathlib==0.24.0
+skops == 0.14.0
+joblib==1.5.3
+
+plotly==6.9.0
+requests==2.34.2
+streamlit==1.61.1
+
+es_core_news_md @ https://github.com/explosion/spacy-models/releases/download/es_core_news_md-3.8.0/es_core_news_md-3.8.0-py3-none-any.whl#sha256=478b8bb3f3e8eb149192f7d80e7cd64f990b7e9bccbc5329df41a57e86326be2
+
+# CuPy → utilizado por la ruta de aceleración GPU
+# cupy-cuda12x==14.1.1
+
