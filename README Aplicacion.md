@@ -19,39 +19,71 @@ scikit-learn
 - requests
 - streamlit
 
-### API
-#### CreacionPipelines
-##### Pipelines
--  usar_pipelines.py -> Modulo con funciones para uso de los Pipelines
-##### Recursos
-###### Clases
-- ClasesAdaptadorasEnsamble.py
-- ClasesEnvoltorio.py
-- ClasesPredictoras.py
-###### EstilosGraficosPlotly
-- EstilosPlotly.py -> Modulo con función de estilos para gráficos creados con Plotly
-###### Limpieza
-- FuncionesLimpieza.py 
-###### ModelosClasificacion
-- modelo_embeddings.pkl
-- modelo_ensamble.pkl
-- modelo_tfidf.pkl
-- Modelos.py -> Modulo con carga de modelos
-###### Vectorizacion
-- multilingual-e5-base
-- vectorizador_tfidf
-- Vectorizadores.py -> Modulo con carga de vectorizadores
-##### Crear Pipelines.py
-Archivo de python que utilizando todas las herramientas anteriores, crea los pipelines para cada uno de los modelos.
-#### api_aplicacion.py
-Api de la aplicación que usando las funciones del modulo FuncionesApi crea los respectivos endpoints. 
-#### FuncionesApi.py
-Modulo que usando las funciones del modulo "usar_pipelines.py", crea las funciones finales que va utilizar la Api de nuestra aplicación.
-### Interfaz Gráfica
-- .streamlit -> Configuración de interfaz de la pagina web
-- static -> Distintas fuentes de letras
-- Interfaz_aplicacion.py -> Código de streamlit para interfaz gráfica
-- ArchivoEjemplo.csv -> Archivo de ejemplo para probar aplicación
+├── Aplicación/
+│   │
+│   ├── API/
+│   │   │
+│   │   ├── CreacionPipelines/
+│   │   │   │
+│   │   │   ├── Pipelines/
+│   │   │   │   └── usar_pipelines.py
+│   │   │   │       └─ Funciones para utilizar los pipelines de predicción.
+│   │   │   │
+│   │   │   ├── Recursos/
+│   │   │   │   │
+│   │   │   │   ├── Clases/
+│   │   │   │   │   ├── ClasesAdaptadorasEnsamble.py
+│   │   │   │   │   ├── ClasesEnvoltorio.py
+│   │   │   │   │   └── ClasesPredictoras.py
+│   │   │   │   │       └─ Clases auxiliares utilizadas por los modelos.
+│   │   │   │   │
+│   │   │   │   ├── EstilosGraficosPlotly/
+│   │   │   │   │   └── EstilosPlotly.py
+│   │   │   │   │       └─ Define estilos reutilizables para gráficos Plotly.
+│   │   │   │   │
+│   │   │   │   ├── Limpieza/
+│   │   │   │   │   └── FuncionesLimpieza.py
+│   │   │   │   │       └─ Funciones utilizadas para el preprocesamiento del texto.
+│   │   │   │   │
+│   │   │   │   ├── ModelosClasificacion/
+│   │   │   │   │   ├── modelo_embeddings.pkl
+│   │   │   │   │   ├── modelo_ensamble.pkl
+│   │   │   │   │   ├── modelo_tfidf.pkl
+│   │   │   │   │   └── Modelos.py
+│   │   │   │   │       └─ Carga los modelos de clasificación entrenados.
+│   │   │   │   │
+│   │   │   │   └── Vectorizacion/
+│   │   │   │       ├── multilingual-e5-base/
+│   │   │   │       ├── vectorizador_tfidf/
+│   │   │   │       └── Vectorizadores.py
+│   │   │   │           └─ Carga los recursos necesarios para vectorizar textos.
+│   │   │   │
+│   │   │   └── Crear Pipelines.py
+│   │   │       └─ Construye los pipelines utilizando modelos,
+│   │   │          vectorizadores y funciones de procesamiento.
+│   │   │
+│   │   ├── api_aplicacion.py
+│   │   │   └─ Define la API y sus endpoints mediante FastAPI.
+│   │   │
+│   │   └── FuncionesApi.py
+│   │       └─ Contiene las funciones finales utilizadas por la API.
+│   │
+│   └── Interfaz Gráfica/
+│       │
+│       ├── .streamlit/
+│       │   └─ Configuración de la interfaz de Streamlit.
+│       │
+│       ├── static/
+│       │   └─ Fuentes utilizadas por la interfaz.
+│       │
+│       ├── Interfaz_aplicacion.py
+│       │   └─ Código principal de la interfaz gráfica.
+│       │
+│       └── ArchivoEjemplo.csv
+│           └─ Archivo de ejemplo para probar la aplicación.
+│
+└── requirements_aplicación.txt
+    └─ Dependencias necesarias para ejecutar la aplicación.
 
 ## Instalación y ejecución
 
