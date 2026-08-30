@@ -1,0 +1,2 @@
+Una vez ejecutado el Notebook, mover los los 3 CSV generados 
+a la carpeta de "Analisis de datos y entrenamiento de modelos"
