@@ -68,5 +68,16 @@ Usando el conjunto de validación se testea el modelo ensamble y se compara con 
 
 Una vez que ya obtenemos los 3 modelos y los vectorizadores, podemos trasladar estos a el apartado de aplicación para su respectivo uso.
 
+## Instalación y ejecución
+
+### Creacion de Modelos
+1. Crear una imagen del contenedor usando Dockerfile
+2. Abrir la carpeta donde esten todos los archivos de Creacion de Modelos
+3. En la terminal escribir el siguiente comando para crear un contenedor en base a la imagen ya creada:
+docker run -it --gpus all --cpus="10" --memory="14.5g" --name proyectosaplicaciones-clasificaciondetexto-creaciondemodelos -v "$(pwd):/espacio_trabajo" entorno-ubuntu
+4. Dentro del contenedor copiar los archivos pixi.toml y pixi.lock a la carpeta llamada "entorno_virtual"
+5. Abrir una terminal para esa carpeta y ejecutar el siguiente comando para instalar en entorno virtual .pixi  -> "pixi install"
+6. Configurar el interprete dentro de nuestro contenedor
+
 ## Autor
 Manuel Elias Orellana Lavayen 
