@@ -1,2 +1,0 @@
-Una vez ejecutado todos los notebooks, transportar los mejores vectorizadores TFIDF y el Vectorizador embeddings, además los 3
-modelos creados a las erespectivas carpetas de la Aplicación, para su respectivo uso.
