@@ -1,11 +1,9 @@
 # clasificacion-multicategoria-resenas-espanol
 
-## Aplicación
+## Aplicacion
 
 ### librerías
-# De preferencia instalar en Python 3.12.10
-
-scikit-learn
+- scikit-learn
 - pandas
 - numpy
 - spacy
@@ -47,21 +45,17 @@ scikit-learn
 │   │   │   │   │       └─ Funciones utilizadas para el preprocesamiento del texto.
 │   │   │   │   │
 │   │   │   │   ├── ModelosClasificacion/
-│   │   │   │   │   ├── modelo_embeddings.pkl
-│   │   │   │   │   ├── modelo_ensamble.pkl
-│   │   │   │   │   ├── modelo_tfidf.pkl
 │   │   │   │   │   └── Modelos.py
 │   │   │   │   │       └─ Carga los modelos de clasificación entrenados.
 │   │   │   │   │
 │   │   │   │   └── Vectorizacion/
-│   │   │   │       ├── multilingual-e5-base/
-│   │   │   │       ├── vectorizador_tfidf/
 │   │   │   │       └── Vectorizadores.py
 │   │   │   │           └─ Carga los recursos necesarios para vectorizar textos.
 │   │   │   │
-│   │   │   └── Crear Pipelines.py
-│   │   │       └─ Construye los pipelines utilizando modelos,
-│   │   │          vectorizadores y funciones de procesamiento.
+│   │   │   ├── Crear Pipelines.py
+│   │   │   │   └─ Construye los pipelines utilizando modelos, vectorizadores y funciones de procesamiento.
+│   │   │   └── Instalando Recursos.py
+│   │   │       └─ Instala los recursos desde un repositorio de huggingface en caso de que falten.
 │   │   │
 │   │   ├── api_aplicacion.py
 │   │   │   └─ Define la API y sus endpoints mediante FastAPI.
@@ -83,28 +77,21 @@ scikit-learn
 │       └── ArchivoEjemplo.csv
 │           └─ Archivo de ejemplo para probar la aplicación.
 │
-└── requirements_aplicación.txt
-    └─ Dependencias necesarias para ejecutar la aplicación.
+├── requirements_aplicación.txt
+│    └─ Dependencias necesarias para ejecutar la aplicación.
+├── Dockerfile_aplicacion
+│    └─ Dockfile para ejecutar la aplicación.
+├── Dockerfile_modificacion
+│    └─ Dockfile para modificar algunos aspectos de la aplicación (Especialmente para crear pipelines).
+└── start.sh
+     └─ Comandos que ejecutan diferentes archivos del proyecto para encender la aplicación cuando se usa el Dockerfile_aplicacion
 ```
 
-## Instalación y ejecución
 
-### Creacion de Modelos
-1. Crear una imagen del contenedor usando Dockerfile
-2. Abrir la carpeta donde esten todos los archivos de Creacion de Modelos
-3. En la terminal escribir el siguiente comando para crear un contenedor en base a la imagen ya creada:
-docker run -it --gpus all --cpus="10" --memory="14.5g" --name proyectosaplicaciones-clasificaciondetexto-creaciondemodelos -v "$(pwd):/espacio_trabajo" entorno-ubuntu
-4. Dentro del contenedor copiar los archivos pixi.toml y pixi.lock a la carpeta llamada "entorno_virtual"
-5. Abrir una terminal para esa carpeta y ejecutar el siguiente comando para instalar en entorno virtual .pixi  -> "pixi install"
-6. Configurar el interprete dentro de nuestro contenedor
-
-### Aplicacion
-1. Crear una imagen del contenedor usando Dockerfile
-2. Abrir la carpeta donde esten todos los archivos de Creacion de Modelos
-3. En la terminal escribir el siguiente comando para crear un contenedor en base a la imagen ya creada:
-docker run -it --gpus all --cpus="10" --memory="14.5g" --name proyectosaplicaciones-clasificaciondetexto-aplicacion -v "$(pwd):/espacio_trabajo" entorno-python
-4. Dentro del contenedor instalar directamente las librerias con pip install requirements_aplicación.txt
-5. Configurar el interprete
+### Instalación y ejecución de Aplicación
+1. Crear una imagen del contenedor usando Dockerfile_aplicacion
+2. Crear un contenedor de la imagen dejando expuesto el puerto indicado en el Dockerfile_aplicacion
+3. Abrir la interfaz de streamlit con el localhost en cualquier buscador
 
 ## Autor
 Manuel Elias Orellana Lavayen 
