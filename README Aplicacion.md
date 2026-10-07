@@ -89,9 +89,9 @@
 
 
 ### Instalación y ejecución de Aplicación
-1. Crear una imagen del contenedor usando Dockerfile_aplicacion
-2. Crear un contenedor de la imagen dejando expuesto el puerto indicado en el Dockerfile_aplicacion
-3. Abrir la interfaz de streamlit con el localhost en cualquier buscador
+1. Crear una imagen del contenedor usando Dockerfile_aplicacion (ejemplo: docker build -f .\Dockerfile_aplicacion -t aplicacion_imagen .)
+2. Crear un contenedor de la imagen dejando expuesto el puerto indicado en el Dockerfile_aplicacion (ejemplo: docker run --name aplicacion_nombre -p 7861:7860 aplicacion_imagen )
+3. Abrir la interfaz de streamlit con el localhost en cualquier buscador dependiendo del apodo que le haya colocado a el puerto. Tambien puede consultar su direccion ip del pc con ipconfig(windows) y abrir la aplicacion en su red local (Ejemplo Localhost: http://localhost:7861) (Ejemplo Red Local: http://192.168.100.5:7861)
 
 ## Autor
 Manuel Elias Orellana Lavayen 
