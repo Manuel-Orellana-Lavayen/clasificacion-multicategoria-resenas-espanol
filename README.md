@@ -1,6 +1,9 @@
 Video Explicativo de funcionalidades de la aplicación
 
-https://github.com/user-attachments/assets/7ef779d8-723f-42b7-999b-576bde36c46e
+
+https://github.com/user-attachments/assets/a557ed92-7bf8-42e8-96a8-17bd7fdb0efb
+
+
 
 
 
